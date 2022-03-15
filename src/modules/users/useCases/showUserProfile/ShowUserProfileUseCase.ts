@@ -12,7 +12,7 @@ class ShowUserProfileUseCase {
     const user = this.usersRepository.findById(user_id);
 
     if (!user) {
-      throw Error("User does not exist");
+      throw Error("User not found");
     }
 
     return user;
